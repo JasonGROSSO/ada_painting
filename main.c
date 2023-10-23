@@ -1,6 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int luminance(int r, int g, int b) {
+    int l;
+    l = (2126 * r + 7152 * g + 722 * b) / 10000;
+    return l;
+}
+
 int main(void){
     FILE *bitmap, *bitmap_out;
     int type,w,h,d;
