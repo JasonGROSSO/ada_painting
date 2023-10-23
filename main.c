@@ -3,7 +3,7 @@
 
 int luminance(int r, int g, int b) {
     int l;
-    l = (2126 * r + 7152 * g + 722 * b) / 10000;
+    l = (0.2126 * r + 0.7152 * g + 0.722 * b);
     return l;
 }
 
@@ -12,8 +12,8 @@ int main(void){
     int type,w,h,d;
 
     printf("RGB Color Test\n");
-    bitmap = fopen("ada.pbm", "r");
-    bitmap_out = fopen("out.pbm", "w");
+    bitmap = fopen("ada.pbm", "rb");
+    bitmap_out = fopen("out.pbm", "wb");
 
     if (bitmap){
         if (bitmap_out){
